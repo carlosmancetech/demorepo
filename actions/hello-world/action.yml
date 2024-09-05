@@ -1,0 +1,10 @@
+name: 'Hello world action'
+description: 'Imprime mensaje de saludo'
+inputs:
+  who-to-greet:
+    description: 'A quién saludar'
+    required: false
+    default: 'Mundo'
+runs:
+  using: node16
+  main: 'index.js'
