@@ -1,0 +1,18 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: main
+
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
+
+    - name: 'Hello world action'
+      uses: ./demorepo/actions/hello-world
+      with:
+        who-to-greet: 'Carlos'
